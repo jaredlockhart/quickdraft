@@ -1,0 +1,947 @@
+body {
+    color             : #CCC;            /* Foreground color used for text */
+    font-family       : Helvetica; 
+    font-size         : 17px;
+    text-shadow       : 0px 1px 1px #000;
+    margin            : 0;              /* Amount of negative space around the outside of the body */
+    padding           : 0;             /* Amount of negative space around the inside of the body */   
+    height            : 100%; 
+    background-color  : #025589;
+    width             : 100%;
+}
+
+body a {
+    text-decoration   : none;
+    color             : #CCC;
+}
+
+.template {
+    display           : none !important;
+}
+
+.pane {
+    background-image  : url(main_bg.jpg); /* Background color */
+}
+
+.popup {
+    -webkit-border-radius   : 10px;
+    background-color        : rgba(0,0,0,.7);
+    color                   : #CCC;
+    font-size               : 22px;
+    font-weight             : bold;
+    top                     : 150px;
+    left                    : 20%;
+    right                   : 20%;
+    padding                 : 10px;
+    position                : absolute;
+    text-align              : center;
+    vertical-align          : middle;
+    display                 : none;
+}
+
+input[type="text"] {
+    font-size     : 17px;
+    padding-left  : 5px;
+}
+
+input[type="password"] {
+    font-size     : 17px;
+    padding-left  : 5px;
+}
+
+input[type="submit"] {
+    display                             : inline;
+    color                               : #CCC;
+    font-size                           : 17px;
+    font-weight                         : bold;
+    text-shadow                         : 0px 1px 1px #000;
+    border                              : 1px solid #000;
+    -webkit-border-top-left-radius      : 4px;
+    -webkit-border-top-right-radius     : 4px;
+    -webkit-border-bottom-left-radius   : 4px;
+    -webkit-border-bottom-right-radius  : 4px;
+    padding                             : 4px;
+    background-image                    : -webkit-gradient(linear, left top, left bottom, from(#7e93bb), color-stop(0.48, #224c93), color-stop(0.49, #013386), to(#013386));
+}
+
+.button, .header_button {
+    display                             : inline;
+    color                               : #CCC;
+    font-size                           : 17px;
+    font-weight                         : bold;
+    text-shadow                         : 0px 1px 1px #000;
+    border                              : 1px solid #000;
+    -webkit-border-top-left-radius      : 4px;
+    -webkit-border-top-right-radius     : 4px;
+    -webkit-border-bottom-left-radius   : 4px;
+    -webkit-border-bottom-right-radius  : 4px;
+    padding                             : 4px 8px;
+    background-image                    : -webkit-gradient(linear, left top, left bottom, from(#7e93bb), color-stop(0.48, #224c93), color-stop(0.49, #013386), to(#013386));
+}
+
+.transparent_menu ul {
+    list-style  : none;
+    margin      : 10px;
+    padding     : 0;
+}
+.transparent_menu ul li {
+    background-color  : rgba(0, 0, 0, 0.2);
+    border            : 1px solid #000;
+    color             : #CCC;
+    display           : block;
+    font-size         : 20px;
+    font-weight       : bold;
+    margin-bottom     : -1px;
+    padding           : 12px 10px;
+    text-decoration   : none;
+    text-shadow       : 0px 1px 1px #000;
+}
+
+.transparent_menu ul li:first-child {
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+
+.transparent_menu ul li:last-child {
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+
+
+.transparent_menu img {
+    margin        : -6px 0px -6px -3px;
+    height        : 30px;
+}
+
+.transparent_menu .right_arrow {
+    float         : right;
+    font-size     : 20px;
+    font-weight   : bold;
+
+}
+
+.transparent_menu .sport_name {
+    display   : inline;
+}
+
+.transparent_menu .draft_count {
+    display   : inline;
+}
+
+.input_box {
+    width     : 150px;
+    font-size : 17px;    
+    height    : 25;
+}
+
+.placeholder_input {
+    width     : 100%;
+    font-size : 17px;
+    height    : 25px;
+}
+
+.logo {
+    display           : block;
+    text-align        : center;
+    background-image  : -webkit-gradient(linear, left top, left bottom, from(#003957), to(#005588));
+
+}
+
+.logo img {
+    margin-top      : 10px;
+}
+
+.footer {
+    position        : absolute;
+    bottom          : 5px;
+    right           : 5px;
+}
+
+.header {
+    width           : 100%;
+    height          : 35px;
+    padding         : 1px 0;
+    background      : -webkit-gradient(linear, left top, left bottom, from(#779bc9), color-stop(0.5, #1a5fac), color-stop(0.5, #064388), color-stop(1.0, #064388));
+    text-align      : center;
+    font-size       : 25px;
+    font-weight     : bold;
+    color           : #CCC;
+    text-shadow     : 0px 1px 1px #000;
+}
+
+.header_table {
+    height          : 100%;
+}
+
+.header input {
+    font-size       : 15px !important;
+    margin          : 0;
+}
+
+.header table {
+    width           : 100%;
+    margin-top      : 1px;
+}
+
+.header table tr td {
+}
+
+
+.header .left {
+    width           : 25%;
+    text-align      : left;
+    padding-left    : 10px;
+    vertical-align  : top;
+}
+
+.header .center {
+    width           : 50%;
+    text-align      : center;
+    font-size       : 25px;
+    font-weight     : bold;
+    color           : #CCC;
+    text-shadow     : 0px 1px 1px #000;    
+}
+
+.header .right {
+    width           : 25%;
+    text-align      : right;
+    padding-right   : 10px;
+}
+
+.refresh_button img { 
+    height          : 15px;
+}
+
+.joined_button_wrapper {
+    text-align      : center;
+    padding         : 5px;
+    background-image  : -webkit-gradient(linear, left top, left bottom, from(#003957), to(#005588));    
+}
+
+.joined_button .selected {
+    background      : -webkit-gradient(linear, left bottom, left top, from(#b3b9b9), color-stop(0.3, #a5a1a2), color-stop(0.7, #878787), to(#6b6b6b)); 
+    color           : #FFF;    
+}
+
+.joined_button ul {
+    margin-top      : 10px;
+}
+
+.joined_button ul li {
+    display         : inline;
+    list-style-type : none;
+    padding         : 5px;
+    background      : -webkit-gradient(linear, left bottom, left top, from(#a4a9a9), color-stop(0.2, #d0d6d6), color-stop(0.5, #d0d6d6), to(#f5eff1));
+    font-size       : 16px;
+    font-weight     : bold;
+    color           : #666;
+    text-align      : center;
+    text-decoration : none;
+}
+
+
+.joined_button li:first-child {
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-top-right-radius: 0px !important;
+    -webkit-border-bottom-right-radius: 0px !important;
+}
+
+.joined_button  li:last-child {
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 0px !important;
+    -webkit-border-bottom-left-radius: 0px !important;
+}
+
+.back table {
+    width             : 50px;
+    margin-top        : 2px;
+    margin-bottom     : -2px;
+}
+
+.back .back_left {
+    width             : 15px;
+    height            : 27px;
+}
+
+.back .back_center {
+    background-image  : url(back_btn_center.png);
+    background-repeat : repeat-x;
+    height            : 27px;
+    color             : #CCC;
+    font-weight       : bold;
+}
+
+.back .back_right {
+    width             : 5px;
+    height            : 27px;
+}
+
+.header_button {
+    padding         : 3px 4px;
+}
+
+
+.footer_menu {
+    position        : absolute;
+    bottom          : 0px;
+    width           : 100%;
+    background      : -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), color-stop(0.5, #1b1b1b), color-stop(0.5, #000));
+    border-top      : 1px solid #555;
+}
+
+.footer_menu table {
+    width           : 100%;
+    padding-bottom  : 5px;
+}
+.footer_menu table tr td {
+    color           : #999;
+    font-size       : 12px;
+    text-align      : center;
+    width           : 20%;
+}
+
+.centered_form li {
+    text-align      : center;
+}
+
+.centered_form input[type="text"] {
+    width           : 100%;
+    padding         : 4px;
+}
+
+.centered_form input[type="password"] {
+    width           : 100%;
+    padding         : 4px;
+}
+
+.centered_form select {
+    width           : 100%;
+    font-size       : 17px;
+}
+
+.news_headlines table {
+    width           : 100%;
+}
+
+.news_headlines .news_player_name { 
+    font-weight     : bold;
+}
+
+.news_headlines .news_team_city {
+    text-align      : right;
+    font-style      : italic;
+    font-weight     : normal;
+}
+
+.news_headlines .news_team_name {
+    text-align      : right;
+    font-weight     : bold;
+}
+
+.news_headlines .news_date {
+    font-style      : italic;
+}
+
+.news_headlines .right_arrow {
+    margin-right    : -10px;
+}
+.draft_listing ul li {
+    padding         : 10px 5px;
+}
+
+.draft_list .right_arrow {
+    margin-right    : -10px;
+    margin-left     : -5px;
+}
+
+.draft_table {
+    width           : 100%;
+    color           : #CCC;
+    font-size       : 15px;
+    text-shadow     : 0px 1px 1px #000;
+}
+
+.draft_table label {
+    font-weight     : bold;
+}
+
+.draft_table .draft_name {
+    font-size       : 20px;
+    font-weight     : bold;
+}
+
+.draft_table .draft_signup {
+    text-align      : right;
+}
+
+.draft_table .draft_signup img {
+    height          : 20px;
+}
+
+.draft_table .draft_data {
+    float           : right;
+    padding-right   : 10px;
+}
+
+.draft_table .draft_date {
+    font-weight     : bold;
+}
+
+.draft_info .right_arrow {
+    display         : none;
+    width           : 0px;
+}
+
+.draft_deadline_entry table {
+    width           : 100%;
+    text-align      : center;
+}
+
+.draft_deadline_entry .label {
+    text-align      : left;
+    vertical-align  : top;
+    font-size       : 20px;
+}
+
+.draft_deadline_entry .labels {
+    font-weight     : normal;
+    font-size       : 15px;
+}
+
+.draft_deadline_entry .numbers {
+    font-weight     : bold;
+    font-size       : 25px;
+}
+
+.draft_dates_entry .label {
+    font-weight     : bold;
+    font-size       : 18px;
+    display         : inline;
+}
+
+.draft_dates_entry .value {
+    font-weight     : normal;
+    text-align      : right;
+    font-size       : 15px;
+    display         : inline;
+    float           : right;
+}
+
+.draft_scoring_entry .position {
+    width           : 100%;
+    text-align      : left;
+}
+
+.draft_scoring_entry table {
+    width           : 100%;
+}
+
+.draft_scoring_entry .multiplier {
+    width           : 20%;
+    color           : #49e72a;
+    font-weight     : bold;   
+}
+
+.draft_scoring_entry .stat_name {
+    padding-left    : 10px;
+}
+
+.draft_game_entry table {
+    width           : 100%;
+}
+
+.draft_game_entry .teams {
+    font-weight     : bold;
+    font-size       : 20px;
+    display         : inline;
+    width           : 50%;
+}
+
+.draft_game_entry .stadium {
+    padding-top     : 3px;
+    font-weight     : normal;
+    font-style      : italic;
+    font-size       : 16px;
+    display         : inline;
+    text-align      : right;
+    vertical-align  : top;
+}
+
+.draft_game_entry .city {
+    font-weight     : normal;
+    font-style      : italic;
+    font-size       : 16px;
+    display         : inline;
+    text-align      : right;
+    vertical-align  : top;
+}    
+
+.draft_game_entry .date {
+    font-weight     : normal;
+    font-size       : 17px;
+}
+
+.draft_cap_entry .label {
+    font-weight     : bold;
+    font-size       : 18px;
+    display         : inline;
+}
+
+.draft_cap_entry .value {
+    font-weight     : normal;
+    text-align      : right;
+    font-size       : 15px;
+    display         : inline;
+    float           : right;
+}
+
+.draft_position_list .right_arrow {
+    margin-right    : -15px;
+}
+
+.draft_position_occupied_entry .position_short {
+    width           : 40px;
+}
+
+.draft_position_empty_entry div {
+    display         : inline;
+}
+
+.draft_position_occupied_entry table {
+    width           : 100%;
+}
+
+.draft_position_occupied_entry .position_short {
+    font-weight     : bold;
+    font-size       : 20px;
+}
+
+.draft_position_occupied_entry .player_name {
+}
+
+.draft_position_occupied_entry .player_salary {
+    text-align      : right;
+}
+
+#draft_roster .reset_submit_table {
+    width           : 100%;
+}
+
+.reset_submit_table .left {
+    text-align      : left;
+}
+
+.reset_submit_table .right {
+    text-align      : right;
+}
+
+#player_list .transparent_menu li {
+    text-align      : center;
+    padding         : 5px !important;
+}
+
+.player_list li {
+    padding         : 10px 5px !important;
+}
+
+.player_list table {
+    width           : 100%;
+}
+
+.player_list td {
+    vertical-align  : middle;
+}
+
+.player_list .player_name {
+    font-weight     : bold;
+    display         : inline;
+    padding-left    : 5px;
+}
+
+.player_list .player_salary {
+    display         : inline;
+    font-weight     : normal;
+    font-size       : 15px;
+    text-align      : right;
+}
+
+.player_list .button {
+    padding         : 0;
+    margin          : 0;
+    text-align      : center;
+    width           : 30px;
+    height          : 30px;
+    font-size       : 20px;
+}
+
+.player_list .right_arrow_cell {
+    width           : 15px;
+}
+
+.player_list .right_arrow {
+    margin-right    : -10px;
+}
+
+.player_list .injured {
+    height          : 20px;
+}
+
+.player_info_list .pick_button {
+    float           : right;
+}
+
+.player_info_list .player_name {
+    font-size       : 25px;
+}
+
+.player_info_list .player_position {
+    font-size       : 18px;
+    font-weight     : normal;
+}
+
+.player_info_list .player_team {
+    font-size       : 15px;
+    font-weight     : normal;
+    font-style      : italic;
+}
+
+.player_info_list table {
+    width           : 100%;
+    margin-top      : 10px;
+}
+
+
+.player_info_list td {
+    padding         : 5px;
+}
+
+.player_stats_label_list {
+    font-weight     : bold;
+}
+
+.player_stats_label_list td {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align      : center;
+    border-top      : 1px solid #000;
+    border-bottom   : 1px solid #000;
+}
+
+.player_stats_value_list td { 
+    text-align      : center;
+}
+
+.player_stats_label_list td:first-child {
+    border          : 1px solid #000;
+    border-right    : none;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+}
+
+.player_stats_label_list td:last-child {
+    border          : 1px solid #000;
+    border-left     : none;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+
+.player_news_entry .player_news_date {
+    font-size       : 18px;
+}
+
+.player_news_entry .player_news_content {
+    padding-top     : 5px;
+    font-size       : 15px;
+    font-weight     : normal;
+}
+
+.game_score_entry table {
+    width           : 100%;
+}
+
+.game_score_entry table tr td {
+    text-align      : center;
+}
+
+.game_score_entry .left {
+    text-align      : left;
+    width           : 35%;
+}
+
+.game_score_entry .right {
+    text-align      : right;
+    width           : 35%;
+}
+
+.game_score_entry .date {
+    text-align      : left;
+    font-size       : 14px;
+    margin-bottom   : 5px;
+}
+
+.game_score_entry .city {
+    font-style      : italic;
+    font-size       : 14px;
+}
+
+.game_score_entry .team {
+    font-weight     : bold;  
+    font-size       : 14px;
+}
+
+.game_score_entry .score {
+    font-weight     : bold;
+    font-size       : 20px;
+    width           : 15%;
+}
+
+.game_score_entry .divider {
+    font-size       : 20px;
+    font-weight     : bold;
+    width           : 15px;
+}
+
+.game_score_entry .right_arrow {
+    margin-right    : -15px;
+    padding-left    : 5px;
+}
+
+.game_info_entry .headline {
+    font-weight     : bold;
+    font-size       : 17px;
+}
+
+.game_info_entry .recap p {
+    font-weight     : normal;
+    font-size       : 15px;
+    padding-top     : 5px;
+}
+
+.user_score_list table tr td {
+    font-size       : 17px;
+    font-weight     : bold;
+}
+
+.user_score_list table {
+    width           : 100%;
+}
+
+.user_score_list .score {
+    text-align      : right;
+    width           : 20%;
+    padding-right   : 10px;
+}
+
+.user_score_list .right_arrow_td {
+    width           : 20px;
+}
+
+.user_score_list .right_arrow {
+    margin-right    : -2px;
+}
+
+.draft_scoring_pick_list table {
+    width           : 100%;
+}
+
+.draft_scoring_pick_list table tr td {
+    font-weight     : bold;
+    font-size       : 17px;
+}
+
+.draft_scoring_pick_list .position {
+    width           : 15%;
+}
+
+.draft_scoring_pick_list .player_name {
+    font-weight     : normal;
+}
+
+.draft_scoring_pick_list .player_score {
+    width           : 20%;
+    text-align      : right;
+}
+
+.draft_scoring_pick_list .right_arrow_td {
+    width           : 20px;
+}
+
+.draft_scoring_pick_list .right_arrow {
+    margin-right    : -10px;
+}
+
+.scoring_performance_entry table {
+    width           : 100%;
+    font-size       : 25px;
+    font-weight     : bold;
+}
+
+.scoring_performance_entry .position_total {
+    text-align      : right;
+}
+
+.scoring_performance_stat_entry {    
+    width           : 100%;
+    font-size       : 17px;
+    font-weight     : normal;
+}
+
+.scoring_performance_stat_entry .stat_name {
+    padding-left    : 10px;   
+}
+
+.scoring_performance_stat_entry .multiplier {
+    font-weight     : bold;
+    color           : #49e72a;
+    text-align      : right;
+    width           : 20%;
+}
+
+.scoring_performance_stat_entry .value {
+    font-weight     : normal;
+    text-align      : right;
+    width           : 30%;
+}
+
+.scoring_performance_stat_entry .total {
+	font-weight		: bold;
+	text-align		: right;
+	width			: 20%;
+}
+
+.leaderboard_entry table {
+    width           : 100%;
+}
+
+.leaderboard_entry .rank {
+    width           : 10%;
+    font-weight     : bold;
+}
+
+.leaderboard_entry .username {
+}
+
+.leaderboard_entry .score {
+    width           : 30%;
+    text-align      : right;
+    font-weight     : bold;
+}
+
+.balance_entry table {
+    width           : 100%;
+}
+
+.balance_entry .balance {
+    text-align      : right;
+    font-weight     : bold;
+}
+
+.transaction_entry .date {
+    font-weight     : bold;
+    width           : 30%;
+}
+
+.transaction_entry table {
+    width           : 100%;
+}
+
+.transaction_entry .time {
+}
+
+.transaction_entry .memo {
+    vertical-align  : top;
+    font-size       : 15px;
+    width           : 50%;
+    padding-left    : 5px;
+}
+
+.transaction_entry .amount {
+    font-weight     : bold;
+    width           : 20%;
+    text-align      : right;
+}
+
+.transaction_list .more {
+    text-align      : center;
+}
+
+.footer_info {
+    width           : 100%;
+    font-size       : 15px;
+    position        : absolute;
+    bottom          : 5px;
+}
+
+.footer_info .version {
+    text-align      : left;
+    padding-left    : 5px;
+}
+
+.footer_info .update_time {
+    text-align      : right;
+    padding-right   : 5px;
+}
+
+#login {
+    text-align      : center;
+}
+
+
+
+#signup h1 {
+    font-size       : 22px;
+    color           : #CCC;
+    text-shadow     : 0px 1px 1px #000;
+}
+
+#signup ul li {
+    text-align      : center;
+}
+
+#home .home_button {
+    display         : none;
+}
+
+#deposit .balance {
+    font-weight     : normal;
+    float           : right;
+}
+
+#deposit input[type="text"] {
+    width           : 100%;
+}
+
+#deposit select {
+    width           : 100%;
+    font-size       : 17px;
+}
+
+#deposit .expiry select {
+    display         : inline;
+    width           : 25%;
+}
+
+#deposit .address {
+    font-weight     : normal;
+    padding-left    : 20px;
+}
+
+#deposit .registered_card {
+    width           : 80%;
+    margin-left     : 20%;
+}
+
+#withdraw_form input[type="text"] {
+    width           : 100%;
+}
+
+#withdraw_form .submit {
+    text-align      : right;
+}
+
+#withdraw .balance {
+    font-weight     : normal;
+    float           : right;
+}

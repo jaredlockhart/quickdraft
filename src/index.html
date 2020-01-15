@@ -1,0 +1,1836 @@
+<html manifest="quickdraft.manifest">
+    <head>
+        <title>Quickdraft</title>
+        <link type="text/css" rel="stylesheet" media="screen" href="jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="iphone.css">
+        <link rel="apple-touch-startup-image" href="loading.png" />
+        <script type="text/javascript" src="jquery-1.4.min.js"></script>
+        <script type="text/javascript" src="jquery.template.js"></script>
+        <script type="text/javascript" src="jquery.getattributes.min.js"></script>
+        <script type="text/javascript" src="jqtouch.js"></script>
+        <script type="text/javascript" src="json2.js"></script>
+        <script type="text/javascript" src="date.js"></script>
+        <script type="text/javascript" src="iphone.js"></script>
+    </head>
+    <body>
+       
+        <div id="splash" class="pane">
+
+  <div class="logo">
+    <img src="qd_logo.png" />
+  </div>
+
+  <div class="popup">
+  </div>
+
+
+  <div id="login" class="transparent_menu">
+    <ul>
+      <form id="login_form">
+        <li>
+          <label for="username">Username</label>
+          <input name="username" id="username" class="input_box" type="text" autocapitalize="off"/>
+        </li>
+
+        <li>
+          <label for="password">Password</label>
+          <input name="password" id="password" class="input_box" type="password"/>
+        </li>
+
+        <li>
+          <input name="remember_me" id="remember_me" type="checkbox">
+          <label for="remember_me">Remember Me?</label>
+          <input id="login_submit" class="submit" type="submit" value="Login">
+        </li>
+        <li>
+          <a href="#new_account" class="slideup">
+            <div id="open_new_account" class="button">
+              Open An Account
+            </div>
+          </a>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <div class="footer">
+    <img src="sms_logo.png" />
+  </div>
+
+</div>
+
+
+
+        <div id="new_account" class="pane">
+
+  <div class="logo">
+    <img src="qd_logo.png" />
+  </div>
+
+  <div class="popup">
+  </div>
+
+  <div id="signup" class="transparent_menu">
+    <form id="new_account_form">
+      <ul>
+        <li>
+          <h1>New Account</h1>
+        </li>
+        <li>
+          <input id="new_username" name="username" class="placeholder_input" type="text" placeholder="Username" autocapitalize="off">
+        </li>
+        <li>
+          <input id="new_password" name="password" class="placeholder_input" type="password" placeholder="Password" autocapitalize="off">
+        </li>
+        <li>
+          <input id="new_email" name="email" class="placeholder_input" type="text" placeholder="Email Address" autocapitalize="off">
+        </li>
+        <li>
+          <input type="checkbox" id="over_18" name="over_18">
+          <label for="over_18">
+            I am over 18 years of age
+          </label>
+        </li>
+        <li>
+          <input id="submit_new_account" type="submit" class="submit" value="Create Account">
+          <a href="#" class="back">
+            <div class="button">Cancel</div>
+          </a>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+</div>
+
+
+
+        <div id="home" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+        </td>
+        <td class="center">
+        Quickdraft
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+      
+  <div class="transparent_menu">
+    <ul>
+      <li class="slide" target="#schedule" drafts="cache.drafts">
+        <img class="icon" src="icon_schedule.png">
+        Draft Schedule
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#schedule" drafts="cache.my_drafts">
+        <img class="icon" src="icon_my_drafts.png">
+        Draft Results
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#game_scores">
+        <img class="icon" src="rules.png">
+        Game Scores
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#news_headlines">
+        <img class="icon" src="icon_news.png">
+        Sports News
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#my_account">
+        <img class="icon" src="icon_account.png">
+        My Account
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#leaderboard">
+        <img class="icon" src="leaders.png">
+        Leaderboard
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="logout">
+        <img class="icon" src="logout.png">
+        Logout
+      </li>
+    </ul>
+  </div>
+
+  <table class="footer_info">
+    <tr>
+      <td class="version">
+      </td>
+      <td class="update_time">
+      </td>
+    </tr>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+        <div id="sport" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Sport
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul>
+      <li class="slide" sport_id="1">
+        <img class="icon" src="icon_mlb.png">
+        <div class="sport_name">Baseball</div>
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" sport_id="2">
+        <img class="icon" src="icon_nba.png">
+        <div class="sport_name">Basketball</div>
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" sport_id="3">
+        <img class="icon" src="icon_nhl.png">
+        <div class="sport_name">Hockey</div>
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" sport_id="4">
+        <img class="icon" src="icon_nfl.png">
+        <div class="sport_name">Football</div>
+        <div class="right_arrow">&rang;</div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        <div id="schedule" class="pane sport_required">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        
+        
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu draft_listing">
+    <ul class="draft_list">
+      <li class="template draft_entry slide" draft_id="${draft_id}" target="${target}">
+        <table class="draft_table">
+          <tr>
+            <td colspan="3" class="draft_name">
+              ${draft_name}
+            </td>
+            <td class="draft_signup">
+              ${draft_signup}
+            </td>
+          </tr>
+		</table>
+		<table class="draft_table">
+          <tr>
+            <td class="draft_date">
+              ${draft_date}
+            </td>
+            <td>
+              <label>
+                Fee
+              </label>
+              <div class="draft_data">
+                ${draft_fee}
+              </div>
+            </td>
+            <td>
+              <label>
+                Players
+              </label>
+              <div class="draft_data">
+                ${draft_signups}/${draft_max_players}
+              </div>
+            </td>
+            <td rowspan="2">
+               <div class="right_arrow">&rang;</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="draft_time">
+              ${draft_time}
+            </td>
+            <td>
+              <label>
+                Prize
+              </label>
+              <div class="draft_data">
+                ${draft_prize}
+              </div>
+            </td>
+            <td>
+              <label>
+                Cap
+              </label>
+              <div class="draft_data">
+                ${draft_cap}
+              </div>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        <div id="my_account" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        My Account
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul>
+      <li class="slide" target="#change_password">
+        <img class="icon" src="icon_change_password.png">
+        Change Password
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#edit_info">
+        <img class="icon" src="icon_edit_profile.png">
+        Edit Personal Info
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#account_overview">
+        <img class="icon" src="icon_account_overview.png">
+        Account Overview
+        <div class="right_arrow">&rang;</div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        <div id="change_password" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Password
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu centered_form">
+    <form id="change_password_form">
+      <ul>
+        <li>
+          <input type="password" name="old_password" placeholder="Old Password">
+        </li>
+        <li>
+          <input type="password" name="new_password" placeholder="New Password">
+        </li>
+        <li>
+          <input id="change_password_button" type="submit" value="Submit">
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        <div id="edit_info" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Edit Info
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu centered_form">
+    <form id="edit_info_form">
+      <ul>
+        <li>
+          <input type="text" name="firstname" placeholder="First Name">
+        </li>
+        <li>
+          <input type="text" name="lastname" placeholder="Last Name">
+        </li>
+        <li>
+          <input type="text" name="telephoneField" placeholder="Phone Number">
+        </li>
+        <li>
+          <input type="text" name="addressField" placeholder="Address">
+        </li>
+        <li>
+          <input type="text" name="city" placeholder="City">
+        </li>
+        <li>
+          <input type="text" name="zipcode" placeholder="Zip/Postal Code">
+        </li>
+        <li>
+          <select name="state">
+            <option value="">State/Province</option>
+            <option value="5">Alberta, CA</option>
+            <option value="4">British Columbia, CA</option>
+            <option value="6">Saskatchewan, CA</option>
+            <option value="7">Manitoba, CA</option>
+            <option value="8">Ontario, CA</option>
+            <option value="10">New Brunswick, CA</option>
+            <option value="11">Nova Scotia, CA</option>
+            <option value="12">Prince Edward Island, CA</option>
+            <option value="13">Newfoundland, CA</option>
+            <option value="14">Yukon, CA</option>
+            <option value="15">Northwest Territories, CA</option>
+            <option value="16">Nunavut, CA</option>
+            <option value="17">Alabama, USA</option>
+            <option value="18">Alaska, USA</option>
+            <option value="21">California, USA</option>
+            <option value="22">Colorado, USA</option>
+            <option value="23">Connecticut, USA</option>
+            <option value="25">District of Columbia, USA</option>
+            <option value="27">Georgia, USA</option>
+            <option value="28">Guam, USA</option>
+            <option value="29">Hawaii, USA</option>
+            <option value="30">Idaho, USA</option>
+            <option value="32">Indiana, USA</option>
+            <option value="34">Kansas, USA</option>
+            <option value="35">Kentucky, USA</option>
+            <option value="37">Maine, USA</option>
+            <option value="38">Marshall islands, USA</option>
+            <option value="40">Massachusetts, USA</option>
+            <option value="41">Michigan, USA</option>
+            <option value="42">Minnesota, USA</option>
+            <option value="43">Mississippi, USA</option>
+            <option value="44">Missouri, USA</option>
+            <option value="46">Nebraska, USA</option>
+            <option value="47">Nevada, USA</option>
+            <option value="48">New Hampshire, USA</option>
+            <option value="49">New Jersey, USA</option>
+            <option value="50">New Mexico, USA</option>
+            <option value="51">New York, USA</option>
+            <option value="52">North Carolina, USA</option>
+            <option value="53">North Dakota, USA</option>
+            <option value="55">Oklahoma, USA</option>
+            <option value="56">Oregon, USA</option>
+            <option value="57">Pennsylvania, USA</option>
+            <option value="58">Puerto Rico, USA</option>
+            <option value="59">Rhode Island, USA</option>
+            <option value="60">South Carolina, USA</option>
+            <option value="61">South Dakota, USA</option>
+            <option value="63">Texas, USA</option>
+            <option value="64">Utah, USA</option>
+            <option value="66">Virgin Islands, USA</option>
+            <option value="67">Virginia, USA</option>
+            <option value="68">Washington, USA</option>
+            <option value="69">West virginia, USA</option>
+            <option value="70">Wisconsin, USA</option>
+            <option value="71">Wyoming, USA</option>
+            <option value="3">Washington, USA</option>
+          </select>                               
+        </li>
+        <li>
+          <input id="edit_info_button" type="submit" value="Submit">
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        <div id="account_overview" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Account
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul>
+      <li class="balance_entry">
+        <table>
+          <tr>
+            <td>
+              Balance
+            </td>
+            <td class="balance">
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  <div class="transparent_menu">
+    <ul class="transaction_list">
+      <li class="transaction_entry template">
+        <table>
+          <tr>
+            <td class="date">
+              ${date}
+            </td>    
+            <td class="memo" rowspan="2">
+              ${memo}
+            </td>
+            <td class="amount">
+              ${amount}
+            </td>
+          </tr>
+          <tr>
+            <td class="time">
+              ${time}
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        
+        <div id="news_headlines" class="pane sport_required">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Player News
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu news_headlines">
+    <ul class="news_headlines_list">
+      <li class="news_headline_entry slide template" story_id="${story_id}" target="#news_story">
+        <table>
+          <tr>
+            <td class="news_player_name">
+              ${lastname},
+            </td>
+            <td class="news_team_city">
+              ${team_city}    
+            </td>
+          </tr>
+          <tr>
+            <td class="news_player_name">
+              ${firstname}
+            </td>
+            <td class="news_team_name">
+              ${team_name}
+            </td>
+          </tr>
+          <tr>
+            <td class="news_date" colspan="2">
+              ${date}
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td class="news_headline">
+              ${headline}
+            </td>
+            <td class="right_arrow_cell">
+              <div class="right_arrow">&rang;</div>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+        
+        <div id="news_story" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Player News
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu news_headlines">
+    <ul class="news_story_list">
+      <li class="news_story_entry template">
+        <table>
+         <tr>
+            <td class="news_player_name">
+              ${lastname},
+            </td>
+            <td class="news_team_city">
+              ${team_city}
+            </td>
+          </tr>
+          <tr>
+            <td class="news_player_name">
+              ${firstname}
+            </td>
+            <td class="news_team_name">
+              ${team_name}
+            </td>
+          </tr>          
+          <tr>
+            <td class="news_date" colspan="2">
+              ${date}
+            </td>
+          </tr>
+          <tr>
+            <td class="news_content" colspan="2">
+              ${content}
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        <div id="draft_menu" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Draft Info
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="draft_info">      
+    </ul>
+  </div>
+
+  <div class="transparent_menu">
+    <ul class="draft_deadline_list">
+      <li class="draft_deadline_entry template">
+        <table cellspacing="0" cellpadding="0">
+          <tr class="numbers">
+            <td class="label">Deadline</td>
+            <td>${days}</td>
+            <td>:</td>
+            <td>${hours}</td>
+            <td>:</td>
+            <td>${minutes}</td>
+          </tr>
+          <tr class="labels">
+            <td></td>
+            <td>Days</td>
+            <td></td>
+            <td>Hours</td>
+            <td></td>
+            <td>Minutes</td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+  
+  
+  <div class="transparent_menu">
+    <ul>
+      <li class="slide" target="#draft_roster">
+        <img class="icon" src="icon_more_on.png">
+        Roster
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#draft_scoring">
+        <img class="icon" src="rules.png">
+        Scoring
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#draft_games">
+        <img class="icon" src="icon_my_drafts_on.png">
+        Games
+        <div class="right_arrow">&rang;</div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+        <div id="draft_scoring" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Scoring
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="draft_scoring_list">
+      <li class="draft_scoring_entry template">
+        <div class="position">
+          ${position}
+        </div>
+        <table class="${position_list} draft_scoring_stat_list">
+          <tr class="draft_scoring_stat_entry template">
+            <td class="stat_name">
+              ${stat_name}
+            </td>
+            <td class="multiplier">
+              ${multiplier} 
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+        
+        <div id="draft_games" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Games
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu draft_dates_list">
+    <ul class="draft_dates_entry template">
+      <li>
+        <div class="label">
+          Games After
+        </div>
+        <div class="value">
+          ${games_after}
+        </div>
+      </li>
+      <li>
+        <div class="label">
+          Games Before
+        </div>
+        <div class="value">
+          ${games_before}
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="transparent_menu">
+    <ul class="draft_game_list">
+      <li class="draft_game_entry template">
+        <table>
+          <tr>
+            <td class="teams">
+              ${teams}
+            </td>
+            <td class="stadium">
+              ${stadium}
+            </td>
+          </tr>
+          <tr>
+            <td class="date">
+              ${date}
+            </td>
+            <td class="city">
+              ${city}
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>   
+
+
+  </div>
+
+</div>
+
+
+        
+        <div id="draft_roster" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Roster
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu draft_cap_list">
+    <ul class="draft_cap_entry template">
+      <li>
+        <div class="label">
+          Cap Used
+        </div>
+        <div class="value">
+          ${cap_used}
+        </div>
+      </li>
+      <li>
+        <div class="label">
+          Cap Available
+        </div>
+        <div class="value">
+          ${cap_available}
+        </div>
+      </li>
+      <li>
+        <table class="reset_submit_table">
+          <tr>
+            <td class="left">
+              <div class="reset_button button">Reset</div>
+            </td>
+            <td class="right">
+              <div class="submit_button button">Submit</div>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  <div class="transparent_menu">
+    <ul class="draft_position_list">
+      <li class="draft_position_occupied_entry template slide" position_id="${position_id}" position_count_id="${position_count_id}" player_id="${player_id}" target="#player_list">
+        <table>
+          <tr>
+            <td class="position_short">${position_short}</td>
+            <td class="player_name">${player_lastname}, ${player_firstname}</td>
+            <td class="player_salary">${player_salary}</td>
+            <td>
+              <div class="right_arrow">&rang;</div>
+            </td>
+          </tr>
+        </table>
+      </li>
+      <li class="draft_position_empty_entry template slide" position_id="${position_id}" position_count_id=${position_count_id} target="#player_list">
+        <div class="position_full">
+          ${position_full}
+        </div>
+        <div class="right_arrow">&rang;</div>
+      </li>
+    </ul>
+  </div>
+
+
+  </div>
+
+</div>
+
+
+        
+        <div id="player_list" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Players
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="joined_button_wrapper">
+    <div class="joined_button">
+      <ul>
+        <li class="player_list_name_sort selected">
+          Name
+          <span class="direction">&uarr;</span>
+        </li>
+        <li class="player_list_salary_sort">
+          Salary
+          <span class="direction">&uarr;</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="transparent_menu">
+    <ul class="player_list">
+      <li class="player_entry template slide" player_id="${player_id}" target="#player_info">
+        <table>
+          <tr>
+            <td class="button" player_id="${player_id}">
+              +
+            </td>
+            <td class="player_name" player_id="${player_id}">
+              ${player_lastname}, ${player_firstname} 
+            </td>
+            <td class="player_salary">
+              ${player_salary}
+            </td>
+            <td class="right_arrow_cell">
+              <div class="right_arrow">&rang;</div>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+
+  </div>
+
+</div>
+
+
+        
+        <div id="player_info" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Player Info
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="player_info_list">
+      <li class="player_info_entry template">
+        <div class="pick_button button" player_id="${player_id}">
+          Pick
+        </div>
+        <div class="player_name">
+          ${lastname}, ${firstname}
+        </div>
+        <div class="player_position">
+          ${position}
+        </div>
+        <div class="player_team">
+          ${team_city} ${team_name}
+        </div>
+        <table cellspacing="0" cellpadding="0">
+          <tr class="player_stats_label_list first_row">
+            <td class="player_stats_label_entry">
+              ${stats_label}
+            </td>
+          </tr>
+          <tr class="player_stats_value_list first_row">
+            <td class="player_stats_value_entry">
+              ${stats_value}
+            </td>
+          </tr>
+          <tr class="player_stats_label_list second_row">
+            <td class="player_stats_label_entry">
+              ${stats_label}
+            </td>
+          </tr>
+          <tr class="player_stats_value_list second_row">
+            <td class="player_stats_value_entry">
+              ${stats_value}
+            </td>
+          </tr>		  
+        </table>
+      </li>
+      <li class="player_news_entry template">
+        <div class="player_news_date">
+          ${news_date}    
+        </div>
+        <div class="player_news_content">
+          ${news_content}
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  </div>
+
+</div>
+
+
+        
+        <div id="game_scores" class="pane sport_required">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        
+  <div class="header_button refresh_button">
+    <img src="refresh.png">
+    Scores
+  </div>
+
+
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="game_score_list">
+      <li class="game_score_entry template" game_id="${game_id}">
+          <div class="date">
+            ${date}
+          </div>
+        <table>
+          <tr>
+            <td class="city left">
+              ${home_city}
+            </td>
+            <td class="score" rowspan="2">
+              ${home_score}
+            </td>
+            <td class="divider" rowspan="2">
+              - 
+            </td>
+            <td class="score" rowspan="2">  
+              ${away_score}
+            </td>
+            <td class="city right">
+              ${away_city}
+            </td>
+            <td rowspan="2">
+              <div class="right_arrow">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="team left" colspan="2">
+              ${home_team}
+            </td>
+            <td class="team right">
+              ${away_team}
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+        
+        <div id="game_info" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        
+  <div class="header_button refresh_button">
+    <img src="refresh.png">
+    Game Info
+  </div>
+
+
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="game_info_list">
+      <li class="game_info_entry template">
+        <div class="headline">
+          ${headline}
+        </div>
+        <div class="recap">
+          ${recap}
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+        
+        <div id="draft_scoring_menu" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        
+  <div class="header_button refresh_button">
+    <img src="refresh.png">
+    Draft Info
+  </div>
+
+
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="draft_info">
+    </ul>
+  </div>
+
+  <div class="transparent_menu">
+    <ul class="user_score_list">
+      <li class="user_score_entry template slide" signup_id="${signup_id}" target="#draft_scoring_roster">
+        <table>
+          <tr>
+            <td class="username">
+              ${username}
+            </td>
+            <td class="score">
+              ${score}
+            </td>
+            <td class="right_arrow_td">
+              <div class="right_arrow">
+                &rang;
+              </div>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="transparent_menu">
+    <ul>
+      <li class="slide" target="#draft_scoring">
+        <img class="icon" src="rules.png">
+        Scoring
+        <div class="right_arrow">&rang;</div>
+      </li>
+      <li class="slide" target="#draft_games">
+        <img class="icon" src="icon_my_drafts_on.png">
+        Games
+        <div class="right_arrow">&rang;</div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+        
+        <div id="draft_scoring_roster" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        
+  <div class="header_button refresh_button">
+    <img src="refresh.png">
+    Roster
+  </div>
+
+
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="draft_scoring_pick_list">
+      <li class="draft_scoring_pick_entry template slide" pick_id="${pick_id}" target="#draft_scoring_performance">
+        <table>
+          <tr>
+            <td class="position">${position}</td>
+            <td class="player_name">${lastname}, ${firstname}</td>
+            <td class="player_score">${score}</td>
+            <td class="right_arrow_td">
+              <div class="right_arrow">&rang;</div>
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+
+  </div>
+
+</div>
+
+
+        
+        <div id="draft_scoring_performance" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        
+  <div class="header_button refresh_button">
+    <img src="refresh.png">
+    Scoring
+  </div>
+
+
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="transparent_menu">
+    <ul class="scoring_performance_list">
+      <li class="scoring_performance_entry template">
+        <table>
+          <tr>
+            <td class="position">
+              ${position} 
+            </td>
+            <td class="position_total">
+              ${position_total}
+            </td>
+          </tr>
+        </table>
+        <table class="${position_list} scoring_performance_stat_list">
+          <tr class="scoring_performance_stat_entry template">
+            <td class="stat_name">
+              ${stat_name}
+            </td>
+            <td class="multiplier">
+              ${multiplier}
+            </td>
+            <td class="value">
+              x ${stat_value} = 
+            </td>
+			<td class="total">
+			  ${stat_total}
+			</td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+        
+        <div id="leaderboard" class="pane ">
+  <div class="header">
+    <table class="header_table">
+      <tr>
+        <td class="left">
+        
+          <div class="back">
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="back_left"><img class="icon" src="back_btn_left.png"></td>
+                <td class="back_center">Back</td>
+                <td class="back_right"><img class="icon" src="back_btn_right.png"></td>
+              </tr>
+            </table>
+          </div>
+        
+        </td>
+        <td class="center">
+        Leaderboard
+        </td>
+        <td class="right">
+        
+          <div class="header_button home_button">
+            Home
+          </div>
+        
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="content">
+    <div class="popup">
+    </div>
+    
+  <div class="joined_button_wrapper">
+    <div class="joined_button">
+      <ul class="joined_button_list">
+        <li class="joined_button_entry ${selected} template" leaderboard_account_id="${account_type}">
+          ${account_type}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="transparent_menu">
+    <ul class="leaderboard_list">
+      <li class="leaderboard_entry template">
+        <table>
+          <tr>
+            <td class="rank">
+              ${rank}
+            </td>
+            <td class="username">
+              ${username}
+            </td>
+            <td class="score">
+              ${score}
+            </td>
+          </tr>
+        </table>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+    </body>
+</html>
+
